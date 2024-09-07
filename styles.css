@@ -1,0 +1,188 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin-top: 60px; /* Adjusted to accommodate fixed nav */
+}
+
+/* Navigation */
+nav {
+    position: fixed; /* Fixes the navigation to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    background-size: cover; /* Ensure the background image covers the nav */
+    background-position: center;
+    z-index: 1000; /* Ensure it's on top of other elements */
+    padding: 10px 0;
+    text-decoration-color: beige;
+    display: flex;
+    justify-content: center; /* Center nav items */
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Header */
+header {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1083533/header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 4rem; /* Large font size */
+}
+
+.header-content p {
+    font-size: 2.5rem; /* Large font size */
+}
+
+.header-content .btn {
+    margin-top: 20px;
+    padding: 15px 25px;
+    background-color: #00aaff;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+/* Main */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+article h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+article p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* About and Take Action Sections */
+.image-section img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.image-section.image-small img {
+    max-width: 30%; /* Smaller size for the image above About and Take Action */
+}
+
+.about-take-action {
+    height: 100%;
+    width:100%;
+    display: flex;
+    justify-content: space-between; /* Space out the images and sections */
+    padding: 50px 20px;
+    flex-wrap: wrap; /* Allows wrapping of content */
+    align-items: center;
+}
+
+.about, .take-action {
+    width: 30%;
+    display: flex;
+}
+
+.about h2, .take-action h2 {
+    font-size: 2em;
+}
+
+.about p, .take-action p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        margin-top: 50px; /* Reduced margin for mobile */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically on mobile */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header {
+        height: 80vh; /* Adjusted height for smaller screens */
+        background-position: top; /* Adjust image position for mobile */
+    }
+
+    .header-content h1 {
+        font-size: 3rem; /* Adjusted font size for smaller screens */
+    }
+
+    .header-content p {
+        font-size: 1.8rem; /* Adjusted font size for smaller screens */
+    }
+
+    .header-content .btn {
+        font-size: 1.2rem; /* Adjusted font size for smaller screens */
+        padding: 10px 20px; /* Adjusted padding for smaller screens */
+    }
+
+    .about-take-action {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about, .take-action {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+    .image-section.image-small img {
+        max-width: 30%; /* Ensure small image is fully visible on smaller screens */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
